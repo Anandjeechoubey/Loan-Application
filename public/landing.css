@@ -1,0 +1,51 @@
+body{
+    background: url(https://images.unsplash.com/photo-1494488180300-4c634d1b2124?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80);
+    background-size: 300vh;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+#loan-form {
+    margin: 10% 20%;
+    z-index: 1;
+    position: relative;
+    background: white;
+    padding: 20px;
+}
+
+#loan-form h1 {
+    text-align: center;
+    color: #000;
+}
+
+#loan-form a {
+    padding: 20px;
+}
+
+.tab {
+    display: none;
+}
+
+input.invalid {
+    background-color: #ffdddd;
+}
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none; 
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+.step.finish {
+    background-color: #4CAF50;
+}
+
