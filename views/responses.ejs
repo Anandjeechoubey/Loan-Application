@@ -2,6 +2,9 @@
     <%allResp.forEach(function(response){%>
         <div id="loan-form" style="padding-bottom: 50px;">
             <h4><%=response.firstname%> <%=response.lastname%></h4>
+            <br>
+            <p>Amount Requested: <%=response.amount%></p>
+            <p>Contact: <%=response.mob%></p>
             <form id="delete-form" action="/responses/<%= response._id %>?_method=DELETE" method="POST" style="display: inline; float: right;">
                 <button class="btn btn-xs btn-danger">Delete</button>
             </form>
