@@ -22,12 +22,12 @@ app.get('/',function(req,res){
     res.render("form");
 });
 
-app.get("/responses", function(req, res){
+app.get('/responses', function(req, res){
     Responses.find({}, function(err, allResp){
         if(err){
             console.log(err);
         } else {
-            res.render("responses",{msg: "Responses will be shown here soon!", allResp : allResp})
+            res.render('responses',{msg: "Responses will be shown here soon!", allResp : allResp})
         }
     });
 });
@@ -40,22 +40,22 @@ app.get('/register',function(req, res){
     res.send("This can be made a user registration route!")
 });
 
-app.post("/", function(req, res){
+app.post('/', function(req, res){
     Responses.create(req.body,function(err,newResponse){
         if(err){
             res.send(err);
         } else {
-            res.redirect("/");
+            res.redirect('/');
         }
     });
 });
 
-app.delete("/responses/:id", function(req, res){
+app.delete('/responses/:id', function(req, res){
     Responses.findByIdAndRemove(req.params.id, function(err, foundPost){
         if(err){
             res.send(err);
         } else {
-            res.redirect("/responses");
+            res.redirect('/responses');
         }
     });
 });
